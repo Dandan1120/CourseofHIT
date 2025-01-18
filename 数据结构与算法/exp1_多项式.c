@@ -141,11 +141,11 @@ void com_derivative()
     Linklist p_head = initlist();
     LNode*k = NULL,*p=NULL,*q=NULL;
     printf("Input your polying\n");
-    p_head = readPolynomial("E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly1.txt");
+    p_head = readPolynomial("Poly1.txt");
     p_head = bubbleSortList(p_head);
     printf("The poly is ");
     showall(p_head);
-    writePolynomial(p_head,"E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly1.txt");
+    writePolynomial(p_head,"Poly1.txt");
     derivative(p_head);
     Delete_Link(p_head);
 }
@@ -180,7 +180,7 @@ void derivative(Linklist head)
         }
     }
 
-    writePolynomial(New_head,"E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly_New.txt");
+    writePolynomial(New_head,"Poly_New.txt");
     printf("The derivative functional is ");
     showall(New_head);
     Delete_Link(New_head);
@@ -355,19 +355,19 @@ void TwoPoly_com(char ope)
     p_head = initlist();
     q_head = initlist();
     printf("Reading your first polying \n");
-    p_head = readPolynomial("E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly1.txt");
+    p_head = readPolynomial("Poly1.txt");
     p_head = bubbleSortList(p_head);
     printf("The poly1 is:");
     showall(p_head);
-    writePolynomial(p_head,"E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly1.txt");
+    writePolynomial(p_head,"Poly1.txt");
     printf("Reading your second polying\n");
-    q_head = readPolynomial("E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly2.txt");
+    q_head = readPolynomial("Poly2.txt");
     q_head = bubbleSortList(q_head);
     printf("The poly2 is:");
     showall(q_head);
-    writePolynomial(q_head,"E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly2.txt");
+    writePolynomial(q_head,"Poly2.txt");
     New_head = com_Poly(p_head,q_head,ope);
-    writePolynomial(New_head,"E:\\Study Project\\C\\C-excise\\experiment1_Linklist\\Poly\\Poly_New.txt");
+    writePolynomial(New_head,"Poly_New.txt");
     printf("The New_poly is:");
     showall(New_head);
     float result = addpoly(New_head,num);
